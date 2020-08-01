@@ -1,0 +1,40 @@
+ 
+
+import { Provider } from 'react-redux';
+importR { createStore } from redux;
+
+
+const store = createStore(reducer);
+
+
+
+ReactDom.render(<Provider store={store}><App/></Provider>
+
+
+
+
+
+Store has to be global so we need to pluggin store at the highest level
+
+and highest level is index.js
+
+we need to import couple of module one from react-redux and that package is called Provider
+
+import { Provider } from react-redux;
+
+Provide allow us to inject the global store.
+
+we can wrap entire app with provider.
+
+Now we need to build the store now so we import {creatStore } from redux
+	
+we need to pass store as property to provider so it will available for entire application.
+
+
+if you want to access the store in your component we nned to map it.
+
+we need to able to subcribe to the store so any changes thet happen to store automatically shouls be coming to your component.
+
+and we need to dispatch action from component.
+
+and our store to props and ctions we need two variable
